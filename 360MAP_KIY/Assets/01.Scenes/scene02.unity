@@ -747,17 +747,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393964292}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &471411313 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8025282151099636480, guid: 979d42e997cfa2b4584a0a6ab65fd6ef, type: 3}
-  m_PrefabInstance: {fileID: 8025282150629290353}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b250e0700c6f6674597aa0cea9021be5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &488030230
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +763,7 @@ GameObject:
   - component: {fileID: 488030236}
   - component: {fileID: 488030235}
   - component: {fileID: 488030238}
+  - component: {fileID: 488030239}
   m_Layer: 5
   m_Name: GameButton
   m_TagString: Untagged
@@ -857,18 +847,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 471411313}
-        m_TargetAssemblyTypeName: HP, Assembly-CSharp
-        m_MethodName: ControlHp
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 517509541}
         m_TargetAssemblyTypeName: ScoreUI, Assembly-CSharp
         m_MethodName: ScoreUp
@@ -885,6 +863,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 488030239}
+        m_TargetAssemblyTypeName: hpButtonCaller, Assembly-CSharp
+        m_MethodName: OnClickAddHp
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1085,6 +1075,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorMode: {fileID: 2800000, guid: 4adc839616690ca43b1f521244cea300, type: 3}
+--- !u!114 &488030239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488030230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45ac33e69c43e0347a1be37626fe40dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &517509541 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7084563040298495095, guid: 979d42e997cfa2b4584a0a6ab65fd6ef, type: 3}
@@ -2699,6 +2701,14 @@ PrefabInstance:
     - target: {fileID: 8025282150521761721, guid: 979d42e997cfa2b4584a0a6ab65fd6ef, type: 3}
       propertyPath: m_Name
       value: GameHp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8025282151099636480, guid: 979d42e997cfa2b4584a0a6ab65fd6ef, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8025282151160514535, guid: 979d42e997cfa2b4584a0a6ab65fd6ef, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8025282151730205145, guid: 979d42e997cfa2b4584a0a6ab65fd6ef, type: 3}
       propertyPath: m_AnchorMax.x

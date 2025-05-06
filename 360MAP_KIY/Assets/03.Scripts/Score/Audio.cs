@@ -4,20 +4,17 @@ using UnityEngine;
 
 public class Audio : MonoBehaviour
 {
-    public GameObject obj;
-    public AudioSource myAudio;
-    public AudioClip hoborAudio;
-    public AudioClip clickAudio;
-
-
+    public GameObject obj; //캐릭터 GameObject
+    public AudioSource myAudio; //AudioSource
+    public AudioClip hoborAudio; //horbor 효과음
+    public AudioClip clickAudio; //click 효과음
 
     public void HoborSound()
     {
-           
-            myAudio.PlayOneShot(hoborAudio);
+
+       myAudio.PlayOneShot(hoborAudio);
         
     }
-
    
     public void ClickSound()
     {
@@ -30,7 +27,5 @@ public class Audio : MonoBehaviour
 
         obj.SetActive(false);
     }
-
-    
 
 }
