@@ -5,32 +5,64 @@ using UnityEngine.UI;
 
 public class HP : MonoBehaviour
 {
+    public static HP Instance;
+
     public Slider hp;
     public static float maxHp = 100;
     public static float plusHp = 0;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        hp.value = (float)plusHp / (float)maxHp;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        TryFindSlider();
+        UpdateHpUI();
+    }
+
     void Update()
     {
-        
+        if (hp == null)
+        {
+            TryFindSlider();
+            UpdateHpUI();
+        }
     }
 
     public void ControlHp()
     {
         plusHp += 10;
-        HandleHp();
+        UpdateHpUI();
+    }
+
+    private void UpdateHpUI()
+    {
+        if (hp != null)
+        {
+            hp.value = plusHp / maxHp;
+        }
 
     }
 
-    private void HandleHp()
+    private void TryFindSlider()
     {
-        hp.value = (float)plusHp / (float)maxHp;
-
+        if (hp == null)
+        {
+            Transform sliderTransform = GameObject.Find("GameHp")?.transform.Find("GameUI/Slider");
+            if (sliderTransform != null)
+            {
+                hp = sliderTransform.GetComponent<Slider>();
+            }
+        }
     }
 }

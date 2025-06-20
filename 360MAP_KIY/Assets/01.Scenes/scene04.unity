@@ -489,6 +489,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameHp
       objectReference: {fileID: 0}
+    - target: {fileID: 8025282151160514535, guid: 979d42e997cfa2b4584a0a6ab65fd6ef, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8025282151730205145, guid: 979d42e997cfa2b4584a0a6ab65fd6ef, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 940947843593030817}
   - component: {fileID: 940947843593030818}
+  - component: {fileID: 2120656690}
   m_Layer: 0
   m_Name: TextObject
   m_TagString: Untagged
@@ -44,4 +45,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
-  downText: {fileID: 0}
+--- !u!114 &2120656690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940947843593030819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7745cf6a3c9a5844e9fb821ba26f9418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FText: {fileID: 0}
