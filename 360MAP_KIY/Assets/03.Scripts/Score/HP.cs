@@ -45,11 +45,6 @@ public class HP : MonoBehaviour
         UpdateHpUI();
     }
 
-    //private void UpdateHpUI()
-    //{
-    //    if (hp != null)
-    //        hp.value = plusHp / maxHp;
-    //}
     private void UpdateHpUI()
     {
         if (hp != null)
@@ -58,7 +53,6 @@ public class HP : MonoBehaviour
         }
 
     }
-
 
     private void TryFindSlider()
     {

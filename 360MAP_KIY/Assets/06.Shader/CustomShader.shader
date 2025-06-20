@@ -8,8 +8,7 @@ Shader "Unlit/CustomShader"
 	{
 		Tags { "RenderType" = "Opaque" }
 		LOD 100
-		//This is used to print the texture inside of the sphere
-		Cull Front
+		Cull Front //inside sphere
 
 	   Pass {
 		CGPROGRAM
@@ -35,7 +34,7 @@ Shader "Unlit/CustomShader"
 			{
 				v2f o;
 				o.vertex = UnityObjectToClipPos(v.vertex);
-				// ADDED BY BERNIE:
+			
 				v.texcoord.x = 1 - v.texcoord.x;
 				o.texcoord = TRANSFORM_TEX(v.texcoord, _MainTex);
 				return o;
